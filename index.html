@@ -195,7 +195,7 @@ function testMirrorSpeed(mirrors) {
         return { url: mirror, time: time };  
       })  
       .catch(error => {  
-        fetch('err.php?mirror=' + encodeURIComponent(mirror))  
+       // fetch('err.php?mirror=' + encodeURIComponent(mirror))  
         const time = Infinity;  
         return { url: mirror, time: time, error: error.message };  
       })  
@@ -212,7 +212,7 @@ function testMirrorSpeed(mirrors) {
   });  
 }  
   
-fetch('/json/diversion.js?t='+Date.now())  
+fetch('diversion.js?t='+Date.now())  
   .then(response => {  
     if (!response.ok) {  
       throw new Error('Failed to fetch mirrors');  
