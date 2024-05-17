@@ -44,7 +44,7 @@
         width: 34px;
       }
       .blue {
-        color: #4f61fd;
+        color: #2c991f;
       }
       .muted {
         color: #666666;
@@ -59,8 +59,8 @@
   padding: 10px 20px;
   text-decoration: none; 
   color: #fff;  
-  background-color: #007BFF; 
-  border: 1px solid #007BFF;  
+  background-color: rgb(53, 140, 187); 
+  border: 1px solid rgb(53, 140, 187); 
   border-radius: 4px; 
   cursor: pointer;  
   transition: background-color 0.3s ease; 
@@ -98,7 +98,7 @@ ul {
         }
 
         .host {
-            color: #007BFF;
+            color: rgb(53, 140, 187);
             font-size: 20px;
             border-bottom: double 1px red;
         }
@@ -121,16 +121,67 @@ a {
 .btn.ping.delay {  
     color: #ff6600;  
 }
+
+ .logotxt {
+            height: 60px;
+            line-height: 60px;
+            font-size: 30px;
+            font-weight: bold;
+            display: inline-block;
+            margin-left: 0.5em;
+            color: #FFF;
+        }
+        
+.logobtn_left {
+            background-color: rgb(187 53 53);
+            padding: 0.1em 0.2em;
+            border-radius: 4px;
+            margin-left: 0.1em;
+}
+
+.logobtn {
+            background-color: rgb(53, 140, 187);
+            padding: 0.1em 0.2em;
+            border-radius: 4px;
+            margin-left: 0.1em;
+}
+
+        .ps {
+            font-size: small;
+            margin-top: 1em;
+            padding: 0.5em 0;
+            background-color: #a5a0a0;
+            width: 50%;
+            transform: translateX(50%);
+            border-radius: 3px;
+        }
+
+.ps {
+            width: 100%;
+            transform: translateX(0);
+}
+.ssl {
+            color: red;
+            background-color: #FFF;
+            padding: 0 0.5em;
+            margin: 0 0.5em;
+            border-radius: 3px;
+}
     </style>
 </head>
 <body>
 <div class="wrapper">
 <div class="text-wrapper">
+<span style="color:red;display: block;font-size: 13px;text-align: center;">使用Chrome（谷歌瀏覽器）可以加速訪問</span>  
+<div class="logotxt"><span class="logobtn_left">PP66</span><span class="logobtn">.Net</span></div>
+<p>您可能會無法正常進入pp66.net</p>
+<p style="color:red">可通過本頁面或下面方式取得新地址</p>
 <p class="blue" style="font-size: 30px">
 <a class="number-din" id='s1'>0%</p>
-<p class="muted" style="font-size: 17px; margin: 0;">請不要關閉！！！</p>
-<p class="muted" style="font-size: 17px; margin-top: 10px; color:red;" id='s2'>為您選擇最佳線路中…</p>
+<p class="muted" style="font-size: 17px; margin-top: 10px; color:red;" id='s2'>請不要關閉,為您選擇最佳線路中…</p>
 <ul id="mirror-list"></ul>
+<p>也可訪問<span style="color:red;">pp51.net</p>
+<div class="ps">也可訪問：<span class="ssl">https://</span>www.cg91.net或<span class="ssl">https://</span>www.cg92.net<br>已確定是您當地的DNS伺服器被入侵劫持。<br>您可以將DNS伺服器更換為<br><span style="color:gold">Google DNS（慣用：8.8.8.8）（備用：8.8.4.4）</span><br>或其它安全的DNS（可使用搜尋引擎查詢DNS設定方法）<br>行動設備可直接使用數據網路流量避免此問題。</div>
 <tag37970 id="foot"><span><p>Android建議使用 Chrome 瀏覽器</p><p>Iphone建議使用內置<a>Safari</a>瀏覽器</p><p>本站是一個非盈利性的聚合站點</p><p>我們的宗旨是為所有愛好者提供完全免費多樣的影片</p><p>請看管好您的設備，不要使未成年人接觸到我們</p></span></tag37970>
 </div>
 </div>
@@ -195,7 +246,7 @@ function testMirrorSpeed(mirrors) {
         return { url: mirror, time: time };  
       })  
       .catch(error => {  
-       // fetch('err.php?mirror=' + encodeURIComponent(mirror))  
+        //fetch('err.php?mirror=' + encodeURIComponent(mirror))  
         const time = Infinity;  
         return { url: mirror, time: time, error: error.message };  
       })  
